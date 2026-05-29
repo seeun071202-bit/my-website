@@ -1,1 +1,206 @@
-# my-website
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI/SW Career Vision 2026</title>
+    <style>
+        /* 1. Design Concept: Dark Mode & Colors */
+        :root {
+            --bg-dark: #050505;
+            --bg-navy: #0a0e17;
+            --point-green: #39FF14;
+            --point-blue: #00D4FF;
+            --text-main: #ffffff;
+            --text-sub: #b0b0b0;
+            --card-bg: #161b22;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Pretendard', -apple-system, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* 2. Navigation */
+        nav {
+            position: fixed;
+            top: 0; width: 100%;
+            background: rgba(10, 14, 23, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { font-weight: 800; font-size: 1.2rem; color: var(--point-green); }
+        .nav-menu { display: flex; gap: 2rem; list-style: none; }
+        .nav-menu a {
+            text-decoration: none; color: var(--text-main);
+            font-size: 0.9rem; font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-menu a:hover { color: var(--point-blue); }
+
+        /* Sections */
+        section { padding: 100px 2rem; max-width: 1000px; margin: 0 auto; min-height: 100vh; }
+        h2 { font-size: 2.5rem; margin-bottom: 3rem; text-align: center; }
+        h2 span { color: var(--point-green); }
+
+        /* Menu 1: Future Jobs (Cards) */
+        .job-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+        .card {
+            background: var(--card-bg);
+            padding: 2rem; border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s;
+        }
+        .card:hover { transform: translateY(-10px); border-color: var(--point-blue); }
+        .card h3 { color: var(--point-blue); margin-bottom: 1rem; }
+        .card p { font-size: 0.95rem; color: var(--text-sub); }
+
+        /* Menu 2: Core Competencies */
+        .skill-item { margin-bottom: 2rem; padding-left: 1rem; border-left: 4px solid var(--point-green); }
+        .skill-item h3 { margin-bottom: 0.5rem; }
+        .skill-item p { color: var(--text-sub); }
+
+        /* Menu 3: Vertical Timeline */
+        .timeline { position: relative; max-width: 800px; margin: 0 auto; }
+        .timeline::after {
+            content: ''; position: absolute; width: 2px; background: var(--point-blue);
+            top: 0; bottom: 0; left: 20px;
+        }
+        .timeline-container {
+            padding: 10px 40px; position: relative; background: inherit; width: 100%;
+        }
+        .timeline-container::after {
+            content: ''; position: absolute; width: 16px; height: 16px;
+            left: 13px; background-color: var(--bg-dark);
+            border: 4px solid var(--point-green); top: 15px; border-radius: 50%; z-index: 1;
+        }
+        .content { padding: 20px; background: var(--card-bg); position: relative; border-radius: 15px; }
+        .year { color: var(--point-green); font-weight: bold; margin-bottom: 5px; display: block; }
+        .content ul { margin-top: 10px; padding-left: 20px; color: var(--text-sub); font-size: 0.9rem; }
+
+        /* 4. Responsive */
+        @media screen and (max-width: 768px) {
+            .nav-menu { display: none; } /* Mobile menu simplified */
+            h2 { font-size: 1.8rem; }
+            section { padding: 60px 1.5rem; }
+        }
+
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <div class="logo">2026 IT VISION</div>
+            <ul class="nav-menu">
+                <li><a href="#jobs">미래 유망 직무</a></li>
+                <li><a href="#skills">핵심 필수 역량</a></li>
+                <li><a href="#roadmap">나의 4년 로드맵</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Menu 1: 미래 유망 직무 -->
+    <section id="jobs">
+        <h2>미래 성장이 기대되는 <span>블루오션</span></h2>
+        <div class="job-grid">
+            <div class="card">
+                <h3>AI 에이전트 오케스트레이터</h3>
+                <p>멀티에이전트 시스템(MAS) 아키텍처를 설계하고, 자율적인 에이전트 간의 상태 관리 및 충돌 조정을 전문적으로 수행합니다. [1]</p>
+            </div>
+            <div class="card">
+                <h3>AI 보안 및 디지털 신뢰 전문가</h3>
+                <p>프롬프트 주입 및 데이터 유출 등 AI 특유의 위험을 방어하고, 콘텐츠의 진위 여부를 검증하는 디지털 출처 기술을 다룹니다. [1]</p>
+            </div>
+            <div class="card">
+                <h3>피지컬 AI 융합 엔지니어</h3>
+                <p>로봇, 드론 등 물리적 하드웨어에 지능을 부여하고 IT와 운영 기술(OT)을 통합하는 융합적 시스템을 개발합니다. [2]</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu 2: 핵심 필수 역량 -->
+    <section id="skills">
+        <h2>2026 채용 시장 <span>핵심 역량</span></h2>
+        <div class="skill-item">
+            <h3>지능형 워크플로우 설계 (Orchestration)</h3>
+            <p>AI와 인간이 한 팀으로 일하는 구조를 설계하고, AI 에이전트 간의 작업 배분 및 실패 시 롤백을 관리하는 능력입니다. [3]</p>
+        </div>
+        <div class="skill-item">
+            <h3>AI 거버넌스 및 신뢰 보장 (Trust)</h3>
+            <p>확률적 모델의 비정형 위협을 차단하고, 데이터 주권 및 규제 준수를 고려하여 안전한 AI 실행 환경을 구축하는 역량입니다. [4]</p>
+        </div>
+        <div class="skill-item">
+            <h3>컨텍스트 엔지니어링 및 융합 (Synthesis)</h3>
+            <p>특정 산업(의료, 금융 등)의 맥락을 이해하여 도메인 특화 모델의 정확도를 높이고 물리 장치에 통합하는 문제 해결 역량입니다. [5]</p>
+        </div>
+    </section>
+
+    <!-- Menu 3: 나의 4년 로드맵 -->
+    <section id="roadmap">
+        <h2>대체 불가능한 성장을 위한 <span>4년 로드맵</span></h2>
+        <div class="timeline">
+            <div class="timeline-container">
+                <div class="content">
+                    <span class="year">1학년: 기초 체력 수립 (The Foundation)</span>
+                    <p>CS 기초(자료구조, 알고리즘) 및 AI 리터러시 확보</p>
+                    <ul>
+                        <li>AI 네이티브 도구(Cursor, Copilot) 활용 습관 [6]</li>
+                        <li>LLM API 기반 단일 목적 챗봇 구현 [6]</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-container">
+                <div class="content">
+                    <span class="year">2학년: AI 네이티브 개발 (The Synthesist)</span>
+                    <p>멀티에이전트 시스템(MAS) 구조 학습 및 도메인 지식 탐색</p>
+                    <ul>
+                        <li>지능형 에이전트 워크플로우 설계 및 구축 [6]</li>
+                        <li>AI 도구를 활용한 '초소형 팀(Tiny Team)' 프로젝트 수행 [6]</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-container">
+                <div class="content">
+                    <span class="year">3학년: 인프라 및 보안 (The Sentinel)</span>
+                    <p>클라우드 오케스트레이션(AWS, K8s) 및 AI 보안 가드레일 적용</p>
+                    <ul>
+                        <li>디지털 출처(Provenance) 기술을 도입한 보안 내재화 서비스 [7]</li>
+                        <li>스케일러블한 서버리스 아키텍처 설계 경험 [7]</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-container">
+                <div class="content">
+                    <span class="year">4학년: 실물 세계 융합 (The Architect)</span>
+                    <p>피지컬 AI 및 산업 특화 모델(DSLM) 전문가로 도약</p>
+                    <ul>
+                        <li>도메인 특화 모델과 MAS를 결합한 통합 솔루션 개발 [7]</li>
+                        <li>센서 데이터 기반 물리적 장치 제어 융합 프로젝트 완수 [7]</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling is handled by CSS 'scroll-behavior: smooth'
+        // Additional interactivity can be added here
+        console.log("Portfolio Website for 2026 IT Career Loaded.");
+    </script>
+</body>
+</html>
